@@ -27,7 +27,7 @@ public class TSpace {
      * @return tuple that matches the pattern
      */
     public LinkedList<Object> inp(LinkedList<Object> pattern) {
-
+        return pattern;
     }
 
     /**
@@ -36,6 +36,6 @@ public class TSpace {
      * @return tuple that matches the pattern
      */
     public LinkedList<Object> rdp(LinkedList<Object> pattern) {
-
+        return pattern;
     }
 }
