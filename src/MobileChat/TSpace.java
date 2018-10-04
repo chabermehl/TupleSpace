@@ -19,7 +19,7 @@ public class TSpace {
      * @param tuple list of object values that define the tuple
      */
     public void out(String key, LinkedList<Object> tuple) {
-
+        tupleSpace.put(key, tuple);
     }
 
     /**
