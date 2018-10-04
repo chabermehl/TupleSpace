@@ -1,12 +1,12 @@
 package MobileChat;
 
 import java.util.LinkedHashMap;
-import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 public class TSpace {
 
-    private Map<String, LinkedList<Object>> tupleSpace;
+    private Map<String, List<Object>> tupleSpace;
 
     public TSpace(){
         tupleSpace = new LinkedHashMap<>();
@@ -18,7 +18,7 @@ public class TSpace {
      * @param key string value used to directly pull the tuple
      * @param tuple list of object values that define the tuple
      */
-    public void out(String key, LinkedList<Object> tuple) {
+    public void out(String key, List<Object> tuple) {
         tupleSpace.put(key, tuple);
     }
 
@@ -28,7 +28,7 @@ public class TSpace {
      * @param pattern list of object values
      * @return tuple that matches the pattern
      */
-    public LinkedList<Object> inp(LinkedList<Object> pattern) {
+    public List<Object> inp(List<Object> pattern) {
         return pattern;
     }
 
@@ -38,7 +38,7 @@ public class TSpace {
      * @param pattern list of object values
      * @return tuple that matches the pattern
      */
-    public LinkedList<Object> rdp(LinkedList<Object> pattern) {
+    public List<Object> rdp(List<Object> pattern) {
         return pattern;
     }
 }
