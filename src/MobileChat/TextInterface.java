@@ -51,7 +51,7 @@ public class TextInterface {
         tupleSpace.out("System", baseAttr);
         System.out.println("SYSTEM COMMANDS\nADD USER <name>\nSHUT DOWN\n");
         System.out.println("USER COMMANDS\nOFFLINE\nONLINE\nPRINT ALL USERS\n" +
-                "PRINT ACTIVE USERS\nSEND\n");
+                "PRINT ACTIVE USERS\nSEND <message>\n");
     }
 
     /**
