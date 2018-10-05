@@ -76,7 +76,7 @@ public class TSpace {
             List<Object> value = tupleSpace.get(key);
             if(pattern.size() == value.size()) {
                 for(int i = 0; i < pattern.size(); i++) {
-                    if(pattern.get(i) == wildCardVal) {
+                    if(pattern.get(i).equals(wildCardVal)) {
                         counter++;
                     } else if (pattern.get(i).equals(value.get(i))) {
                         counter++;
