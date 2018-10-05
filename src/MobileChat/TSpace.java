@@ -23,7 +23,7 @@ public class TSpace {
         boolean exists = false;
         for(String tempKey : tupleSpace.keySet()) {
             List<String> tempValue = tupleSpace.get(tempKey);
-            if (tempValue.equals(tuple)) {
+            if (tuple.equals(tempValue)) {
                 exists = true;
             }
         }
