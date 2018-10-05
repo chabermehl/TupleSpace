@@ -29,9 +29,6 @@ public class TSpace {
         }
         if (!exists) {
             tupleSpace.put(key, tuple);
-            System.out.println("ADDED");
-        } else {
-            System.out.println("EXISTS");
         }
     }
 
