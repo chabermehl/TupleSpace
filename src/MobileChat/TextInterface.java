@@ -1,5 +1,7 @@
 package MobileChat;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
 public class TextInterface {
@@ -24,6 +26,20 @@ public class TextInterface {
     }
 
     private void allUsers() {
+        boolean userNames = true;
+        List<String> pattern = new LinkedList<>();
+        List<String> userName;
+        pattern.add("*");
+        pattern.add("*");
+        while(userNames) {
+            userName = tupleSpace.rdp(pattern);
+            if(!(userName == null)) {
+                System.out.println(userName.get(0));
+                tupleSpace.out(userName.get(0), userName);
+            } else {
+                userNames = false;
+            }
 
+        }
     }
 }
