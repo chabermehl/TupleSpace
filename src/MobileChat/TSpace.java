@@ -19,7 +19,16 @@ public class TSpace {
      * @param tuple list of object values that define the tuple
      */
     public void out(String key, List<Object> tuple) {
-        tupleSpace.put(key, tuple);
+        boolean exists = false;
+        for(String tempKey : tupleSpace.keySet()) {
+            List<Object> tempValue = tupleSpace.get(tempKey);
+            if (tempValue.equals(tuple)) {
+                exists = true;
+            }
+        }
+        if (!exists) {
+            tupleSpace.put(key, tuple);
+        }
     }
 
     /**
