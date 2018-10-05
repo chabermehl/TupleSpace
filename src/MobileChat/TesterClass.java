@@ -15,6 +15,7 @@ public class TesterClass {
         List<String> testTuple2 = new LinkedList<>();
         List<String> testTuple3 = new LinkedList<>();
         List<String> patternTuple = new LinkedList<>();
+        List<String> patternTuple1 = new LinkedList<>();
 
         String testVal1 = "Hello";
         String testVal2 = "Kappa123";
@@ -40,19 +41,30 @@ public class TesterClass {
         patternTuple.add(testVal3);
         patternTuple.add(testVal4);
 
+        patternTuple1.add(testVal1);
+        patternTuple1.add(wildCard);
+        patternTuple1.add(testVal3);
+        patternTuple1.add(wildCard);
+
         System.out.println(testTuple1);
         System.out.println(testTuple2);
         System.out.println(testTuple3);
         System.out.println(patternTuple);
+        System.out.println(patternTuple1);
 
         tupleS.out("testTuple1", testTuple1);
         tupleS.out("testTuple2", testTuple2);
         tupleS.out("testTuple3", testTuple3);
 
-        System.out.println(tupleS.rdp(patternTuple));
-        System.out.println(tupleS.inp(patternTuple));
-        System.out.println(tupleS.inp(patternTuple));
-        System.out.println(tupleS.rdp(patternTuple));
+//        System.out.println(tupleS.rdp(patternTuple));
+//        System.out.println(tupleS.inp(patternTuple));
+//        System.out.println(tupleS.inp(patternTuple));
+//        System.out.println(tupleS.rdp(patternTuple));
+
+        System.out.println(tupleS.rdp(patternTuple1));
+        System.out.println(tupleS.inp(patternTuple1));
+        System.out.println(tupleS.inp(patternTuple1));
+        System.out.println(tupleS.rdp(patternTuple1));
 
     }
 }
