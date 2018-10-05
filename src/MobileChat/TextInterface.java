@@ -24,6 +24,8 @@ public class TextInterface {
             } else if(systemCommand.contains("SHUT DOWN")) {
                 shutDown = true;
             }
+            textI.printActiveUsers();
+            textI.printAllUsers();
         }
     }
 
@@ -42,7 +44,10 @@ public class TextInterface {
      * Initiates the chat server with a SYSTEM user for initial commands
      */
     private void initializeChat() {
-        tupleSpace.out("System", null);
+        List<String> baseAttr = new LinkedList<>();
+        baseAttr.add("System");
+        baseAttr.add("Online");
+        tupleSpace.out("System", baseAttr);
         System.out.println("SYSTEM COMMANDS\nADD USER <name>\nSHUT DOWN\n");
         System.out.println("USER COMMANDS\nOFFLINE\nONLINE\nPRINT ALL USERS\n" +
                 "PRINT ACTIVE USERS\nSEND\n");

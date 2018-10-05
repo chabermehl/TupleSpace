@@ -68,7 +68,7 @@ public class TSpace {
         int counter = 0;
         for(String key : tupleSpace.keySet()) {
             List<String> value = tupleSpace.get(key);
-            if(pattern.size() == value.size()) {
+            if(value.size() == pattern.size()) {
                 for(int i = 0; i < pattern.size(); i++) {
                     if(pattern.get(i).equals(wildCardVal)) {
                         counter++;
