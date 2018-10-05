@@ -8,7 +8,7 @@ public class TextInterface {
 
     TSpace tupleSpace = new TSpace();
     Scanner scanner = new Scanner(System.in);
-    List<Object> systemAttr = new LinkedList<>();
+    List<Object> systemMessages = new LinkedList<>();
 
     public static void main(String args[]) {
         TextInterface textI = new TextInterface();
@@ -21,8 +21,8 @@ public class TextInterface {
     }
 
     private void initializeChat() {
-        systemAttr.add("Online");
-        tupleSpace.out("System", systemAttr);
+        systemMessages.add("Online");
+        tupleSpace.out("System", systemMessages);
         System.out.println("SYSTEM COMMANDS\nADD USER <name>\n");
         System.out.println("USER COMMANDS\nOFFLINE\nONLINE\nPRINT ALL USERS\n" +
                 "PRINT ACTIVE USERS\nSEND\nALL MESSAGES\n");
