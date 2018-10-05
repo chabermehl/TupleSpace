@@ -54,13 +54,10 @@ public class TSpace {
                     }
                 }
                 if(counter == pattern.size()) {
-                    System.out.println(counter);
                     return tupleSpace.remove(key);
                 }
             }
         }
-        System.out.println(counter);
-        System.out.println(pattern.size() - 1);
         return null;
     }
 
