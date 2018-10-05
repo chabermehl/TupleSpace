@@ -19,7 +19,8 @@ public class TextInterface {
             System.out.println("System: \n");
             systemCommand = textI.scanner.nextLine();
             if(systemCommand.contains("ADD USER")) {
-
+                systemCommand.replace("ADD USER ", "");
+                textI.addUser(systemCommand);
             }
         }
     }
