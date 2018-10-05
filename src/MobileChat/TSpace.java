@@ -7,6 +7,7 @@ import java.util.Map;
 public class TSpace {
 
     private Map<String, List<Object>> tupleSpace;
+    private String wildCardVal = "*";
 
     public TSpace(){
         tupleSpace = new LinkedHashMap<>();
@@ -43,7 +44,7 @@ public class TSpace {
             List<Object> value = tupleSpace.get(key);
             if(pattern.size() == value.size()) {
                 for(int i = 0; i < pattern.size(); i++) {
-                    if(pattern.get(i) == "*") {
+                    if(pattern.get(i) == wildCardVal) {
                         counter++;
                     } else if (pattern.get(i).equals(value.get(i))) {
                         counter++;
@@ -69,7 +70,7 @@ public class TSpace {
             List<Object> value = tupleSpace.get(key);
             if(pattern.size() == value.size()) {
                 for(int i = 0; i < pattern.size(); i++) {
-                    if(pattern.get(i) == "*") {
+                    if(pattern.get(i) == wildCardVal) {
                         counter++;
                     } else if (pattern.get(i).equals(value.get(i))) {
                         counter++;
