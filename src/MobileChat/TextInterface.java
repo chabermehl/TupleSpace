@@ -30,7 +30,7 @@ public class TextInterface {
      */
     private void initializeChat() {
         tupleSpace.out("System", null);
-        System.out.println("SYSTEM COMMANDS\nADD USER <name>\n");
+        System.out.println("SYSTEM COMMANDS\nADD USER <name>\nSHUT DOWN\n");
         System.out.println("USER COMMANDS\nOFFLINE\nONLINE\nPRINT ALL USERS\n" +
                 "PRINT ACTIVE USERS\nSEND\n");
     }
