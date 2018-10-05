@@ -8,7 +8,6 @@ public class TextInterface {
 
     TSpace tupleSpace = new TSpace();
     Scanner scanner = new Scanner(System.in);
-    List<Object> systemMessages = new LinkedList<>();
 
     public static void main(String args[]) {
         TextInterface textI = new TextInterface();
@@ -16,19 +15,18 @@ public class TextInterface {
     }
 
     private void addUser(String name) {
-        List<Object> messages = new LinkedList<>();
-        tupleSpace.out(name, messages);
+        List<Object> attr = new LinkedList<>();
+        tupleSpace.out(name, attr);
     }
 
     private void initializeChat() {
-        systemMessages.add("Online");
-        tupleSpace.out("System", systemMessages);
+        systemAttr.add("Online");
+        tupleSpace.out("System", systemAttr);
         System.out.println("SYSTEM COMMANDS\nADD USER <name>\n");
         System.out.println("USER COMMANDS\nOFFLINE\nONLINE\nPRINT ALL USERS\n" +
-                "PRINT ACTIVE USERS\nSEND\nALL MESSAGES\n");
+                "PRINT ACTIVE USERS\nSEND\n");
     }
 
     private void allUsers() {
-
     }
 }
