@@ -12,6 +12,7 @@ public class TextInterface {
 
     public static void main(String args[]) {
         TextInterface textI = new TextInterface();
+        textI.initializeChat();
     }
 
     private void addUser(String name, List<Object> attributes) {
@@ -21,5 +22,9 @@ public class TextInterface {
     private void initializeChat() {
         systemAttr.add("Online");
         tupleSpace.out("System", systemAttr);
+        System.out.println("SYSTEM COMMANDS\nADD USER <name> <attributes>\n");
+        System.out.println("\nUSER COMMANDS\nOFFLINE\nONLINE\nPRINT ALL USERS\n" +
+                "PRINT ACTIVE USERS\nSEND\nALL MESSAGES\n");
+
     }
 }
