@@ -87,4 +87,22 @@ public class TextInterface {
             }
         }
     }
+
+    private void moveThroughActive() {
+        boolean userNames = true;
+        String userCommand;
+        List<String> pattern = new LinkedList<>();
+        List<String> userName;
+        pattern.add("*");
+        pattern.add("Online");
+        while(userNames) {
+            userName = tupleSpace.rdp(pattern);
+            if(!(userName == null)) {
+                System.out.println(userName.get(0));
+                userCommand = scanner.nextLine();
+            } else {
+                userNames = false;
+            }
+        }
+    }
 }
