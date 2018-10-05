@@ -14,10 +14,20 @@ public class TextInterface {
         textI.initializeChat();
     }
 
+    /**
+     * adds a user to the space with an initial state of online
+     * @param name the name of the user
+     */
     private void addUser(String name) {
-        tupleSpace.out(name, null);
+        List<String> initialState = new LinkedList<>();
+        initialState.add(name);
+        initialState.add("Online");
+        tupleSpace.out(name, initialState);
     }
 
+    /**
+     * Initiates the chat server with a SYSTEM user for initial commands
+     */
     private void initializeChat() {
         tupleSpace.out("System", null);
         System.out.println("SYSTEM COMMANDS\nADD USER <name>\n");
@@ -25,6 +35,9 @@ public class TextInterface {
                 "PRINT ACTIVE USERS\nSEND\n");
     }
 
+    /**
+     * prints all of the users regardless of status
+     */
     private void printAllUsers() {
         boolean userNames = true;
         List<String> pattern = new LinkedList<>();
@@ -42,6 +55,9 @@ public class TextInterface {
         }
     }
 
+    /**
+     * prints all of the active users
+     */
     private void printActiveUsers() {
         boolean userNames = true;
         List<String> pattern = new LinkedList<>();
