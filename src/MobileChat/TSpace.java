@@ -38,7 +38,16 @@ public class TSpace {
      * @return tuple that matches the pattern
      */
     public List<Object> inp(List<Object> pattern) {
-        return pattern;
+        for(String key : tupleSpace.keySet()) {
+            List<Object> value = tupleSpace.get(key);
+            if(pattern.size() == value.size()) {
+                for(int i = 0; i < pattern.size(); i++) {
+                    if(pattern.get(i) != "*" && pattern.get(i) == value.get(i)) {
+
+                    }
+                }
+            }
+        }
     }
 
     /**
