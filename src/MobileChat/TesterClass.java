@@ -48,6 +48,8 @@ public class TesterClass {
 
         System.out.println(tupleS.rdp(patternTuple));
         System.out.println(tupleS.inp(patternTuple));
+        System.out.println(tupleS.inp(patternTuple));
+        System.out.println(tupleS.rdp(patternTuple));
 
     }
 }
