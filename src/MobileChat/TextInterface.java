@@ -54,14 +54,15 @@ public class TextInterface {
     private void printAllUsers() {
         boolean userNames = true;
         List<String> pattern = new LinkedList<>();
+        List<String> printed = new LinkedList<>();
         List<String> userName;
         pattern.add("*");
-        pattern.add("*");
+        pattern.add("Online");
         while(userNames) {
             userName = tupleSpace.rdp(pattern);
-            if(!(userName == null)) {
+            if(!(userName == null || printed.contains(userName.get(0)))) {
                 System.out.println(userName.get(0));
-                tupleSpace.out(userName.get(0), userName);
+                printed.add(userName.get(0));
             } else {
                 userNames = false;
             }
@@ -74,14 +75,15 @@ public class TextInterface {
     private void printActiveUsers() {
         boolean userNames = true;
         List<String> pattern = new LinkedList<>();
+        List<String> printed = new LinkedList<>();
         List<String> userName;
         pattern.add("*");
         pattern.add("Online");
         while(userNames) {
             userName = tupleSpace.rdp(pattern);
-            if(!(userName == null)) {
+            if(!(userName == null || printed.contains(userName.get(0)))) {
                 System.out.println(userName.get(0));
-                tupleSpace.out(userName.get(0), userName);
+                printed.add(userName.get(0));
             } else {
                 userNames = false;
             }
