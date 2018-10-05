@@ -37,7 +37,7 @@ public class TextInterface {
         List<String> initialState = new LinkedList<>();
         initialState.add(name);
         initialState.add("Online");
-        System.out.println("init" + initialState);
+
         tupleSpace.out(name, initialState);
     }
 
