@@ -15,16 +15,20 @@ public class TextInterface {
         textI.initializeChat();
     }
 
-    private void addUser(String name, List<Object> attributes) {
-        tupleSpace.out(name, attributes);
+    private void addUser(String name) {
+        List<Object> messages = new LinkedList<>();
+        tupleSpace.out(name, messages);
     }
 
     private void initializeChat() {
         systemAttr.add("Online");
         tupleSpace.out("System", systemAttr);
-        System.out.println("SYSTEM COMMANDS\nADD USER <name> <attributes>\n");
-        System.out.println("\nUSER COMMANDS\nOFFLINE\nONLINE\nPRINT ALL USERS\n" +
+        System.out.println("SYSTEM COMMANDS\nADD USER <name>\n");
+        System.out.println("USER COMMANDS\nOFFLINE\nONLINE\nPRINT ALL USERS\n" +
                 "PRINT ACTIVE USERS\nSEND\nALL MESSAGES\n");
+    }
+
+    private void allUsers() {
 
     }
 }
