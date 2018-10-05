@@ -53,7 +53,7 @@ public class TSpace {
                         counter++;
                     }
                 }
-                if(counter == pattern.size() - 1) {
+                if(counter == pattern.size()) {
                     System.out.println(counter);
                     return tupleSpace.remove(key);
                 }
@@ -82,7 +82,7 @@ public class TSpace {
                         counter++;
                     }
                 }
-                if(counter == pattern.size() - 1) {
+                if(counter == pattern.size()) {
                     return tupleSpace.get(key);
                 }
             }
