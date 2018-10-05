@@ -96,6 +96,10 @@ public class TextInterface {
         }
     }
 
+    /**
+     * moves through all the active users allowing them to complete one action
+     * or no action
+     */
     private void moveThroughActive() {
         boolean userNames = true;
         String userCommand;
