@@ -47,6 +47,6 @@ public class TesterClass {
         tupleS.out("testTuple3", testTuple3);
 
         System.out.println(tupleS.inp(patternTuple));
-
+        System.out.println(tupleS.rdp(patternTuple));
     }
 }
