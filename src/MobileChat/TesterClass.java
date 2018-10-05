@@ -1,3 +1,6 @@
+/*
+I use this class purely for testing the TSpace methods
+ */
 package MobileChat;
 
 import java.util.LinkedList;
