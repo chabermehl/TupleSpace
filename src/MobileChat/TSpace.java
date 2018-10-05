@@ -60,6 +60,7 @@ public class TSpace {
             }
         }
         System.out.println(counter);
+        System.out.println(pattern.size() - 1);
         return null;
     }
 
