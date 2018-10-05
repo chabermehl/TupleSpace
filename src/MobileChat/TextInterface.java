@@ -1,4 +1,4 @@
 package MobileChat;
 
-public class TextInterace {
+public class TextInterface {
 }
