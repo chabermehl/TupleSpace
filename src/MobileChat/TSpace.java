@@ -23,12 +23,16 @@ public class TSpace {
         boolean exists = false;
         for(String tempKey : tupleSpace.keySet()) {
             List<String> tempValue = tupleSpace.get(tempKey);
+            System.out.println("tenpval" + tempValue);
             if (tuple.get(0).equals(tempValue.get(0))) {
                 exists = true;
             }
         }
         if (!exists) {
+            System.out.println("key" + key);
+            System.out.println("tuple" + tuple);
             tupleSpace.put(key, tuple);
+            System.out.println(tupleSpace.get("dave"));
         }
     }
 
