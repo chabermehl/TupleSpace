@@ -11,15 +11,15 @@ public class TesterClass {
     public static void main(String args[]) {
         TSpace tupleS = new TSpace();
 
-        List<Object> testTuple1 = new LinkedList<>();
-        List<Object> testTuple2 = new LinkedList<>();
-        List<Object> testTuple3 = new LinkedList<>();
-        List<Object> patternTuple = new LinkedList<>();
+        List<String> testTuple1 = new LinkedList<>();
+        List<String> testTuple2 = new LinkedList<>();
+        List<String> testTuple3 = new LinkedList<>();
+        List<String> patternTuple = new LinkedList<>();
 
         String testVal1 = "Hello";
         String testVal2 = "Kappa123";
-        Integer testVal3 = 13;
-        Integer testVal4 = 2;
+        String testVal3 = "13";
+        String testVal4 = "2";
         String wildCard = "*";
 
         testTuple1.add(testVal1);
