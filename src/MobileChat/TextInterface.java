@@ -12,6 +12,16 @@ public class TextInterface {
     public static void main(String args[]) {
         TextInterface textI = new TextInterface();
         textI.initializeChat();
+
+        boolean shutDown = false;
+        String systemCommand;
+        while(!shutDown) {
+            System.out.println("System: \n");
+            systemCommand = textI.scanner.nextLine();
+            if(systemCommand.contains("ADD USER")) {
+
+            }
+        }
     }
 
     /**
