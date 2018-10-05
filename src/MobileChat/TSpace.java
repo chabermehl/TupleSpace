@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class TSpace {
 
-    private Map<String, List<Object>> tupleSpace;
+    private Map<String, List<String>> tupleSpace;
     private String wildCardVal = "*";
 
     public TSpace(){
@@ -19,10 +19,10 @@ public class TSpace {
      * @param key string value used to directly pull the tuple
      * @param tuple list of object values that define the tuple
      */
-    public void out(String key, List<Object> tuple) {
+    public void out(String key, List<String> tuple) {
         boolean exists = false;
         for(String tempKey : tupleSpace.keySet()) {
-            List<Object> tempValue = tupleSpace.get(tempKey);
+            List<String> tempValue = tupleSpace.get(tempKey);
             if (tempValue.equals(tuple)) {
                 exists = true;
             }
@@ -38,10 +38,10 @@ public class TSpace {
      * @param pattern list of object values
      * @return tuple that matches the pattern
      */
-    public List<Object> inp(List<Object> pattern) {
+    public List<String> inp(List<String> pattern) {
         int counter = 0;
         for(String key : tupleSpace.keySet()) {
-            List<Object> value = tupleSpace.get(key);
+            List<String> value = tupleSpace.get(key);
             if(pattern.size() == value.size()) {
                 for(int i = 0; i < pattern.size(); i++) {
                     if(pattern.get(i).equals(wildCardVal)) {
@@ -64,10 +64,10 @@ public class TSpace {
      * @param pattern list of object values
      * @return tuple that matches the pattern
      */
-    public List<Object> rdp(List<Object> pattern) {
+    public List<String> rdp(List<String> pattern) {
         int counter = 0;
         for(String key : tupleSpace.keySet()) {
-            List<Object> value = tupleSpace.get(key);
+            List<String> value = tupleSpace.get(key);
             if(pattern.size() == value.size()) {
                 for(int i = 0; i < pattern.size(); i++) {
                     if(pattern.get(i).equals(wildCardVal)) {
