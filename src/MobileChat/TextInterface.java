@@ -20,6 +20,7 @@ public class TextInterface {
             systemCommand = textI.scanner.nextLine();
             if(systemCommand.contains("ADD USER")) {
                 systemCommand = systemCommand.replace("ADD USER ", "");
+                System.out.println(systemCommand);
                 textI.addUser(systemCommand);
             } else if(systemCommand.contains("SHUT DOWN")) {
                 shutDown = true;
@@ -38,6 +39,7 @@ public class TextInterface {
         initialState.add(name);
         initialState.add("Online");
         tupleSpace.out(name, initialState);
+        System.out.println(tupleSpace.rdp(initialState));
     }
 
     /**
