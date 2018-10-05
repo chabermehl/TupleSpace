@@ -25,7 +25,7 @@ public class TextInterface {
                 "PRINT ACTIVE USERS\nSEND\n");
     }
 
-    private void allUsers() {
+    private void printAllUsers() {
         boolean userNames = true;
         List<String> pattern = new LinkedList<>();
         List<String> userName;
@@ -39,7 +39,23 @@ public class TextInterface {
             } else {
                 userNames = false;
             }
+        }
+    }
 
+    private void printActiveUsers() {
+        boolean userNames = true;
+        List<String> pattern = new LinkedList<>();
+        List<String> userName;
+        pattern.add("*");
+        pattern.add("Online");
+        while(userNames) {
+            userName = tupleSpace.rdp(pattern);
+            if(!(userName == null)) {
+                System.out.println(userName.get(0));
+                tupleSpace.out(userName.get(0), userName);
+            } else {
+                userNames = false;
+            }
         }
     }
 }
