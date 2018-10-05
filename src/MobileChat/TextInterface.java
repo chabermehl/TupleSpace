@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class TextInterface {
 
-    TSpace tupleSpace = new TSpace();
-    Scanner scanner = new Scanner(System.in);
+    private TSpace tupleSpace = new TSpace();
+    private Scanner scanner = new Scanner(System.in);
 
     public static void main(String args[]) {
         TextInterface textI = new TextInterface();
@@ -19,8 +19,10 @@ public class TextInterface {
             System.out.println("System: \n");
             systemCommand = textI.scanner.nextLine();
             if(systemCommand.contains("ADD USER")) {
-                systemCommand.replace("ADD USER ", "");
+                systemCommand = systemCommand.replace("ADD USER ", "");
                 textI.addUser(systemCommand);
+            } else if(systemCommand.contains("SHUT DOWN")) {
+                System.exit(0);
             }
         }
     }
