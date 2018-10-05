@@ -13,4 +13,7 @@ public class TextInterface {
         TextInterface textI = new TextInterface();
     }
 
+    private void addUser(String name, List<Object> attributes) {
+        tupleSpace.out(name, attributes);
+    }
 }
