@@ -1,5 +1,8 @@
 /*
-I use this class purely for testing the TSpace methods
+Charles Habermehl
+10-5-2018
+Mobile Chat
+used purely for testing
  */
 package MobileChat;
 

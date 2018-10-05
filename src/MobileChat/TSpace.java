@@ -1,3 +1,9 @@
+/*
+Charles Habermehl
+10-5-2018
+Mobile Chat
+Tuple Space file that is the backbone of this project
+ */
 package MobileChat;
 
 import java.util.LinkedHashMap;

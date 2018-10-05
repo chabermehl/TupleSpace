@@ -1,3 +1,9 @@
+/*
+Charles Habermehl
+10-5-2018
+Mobile Chat
+text based interface
+ */
 package MobileChat;
 
 import java.util.LinkedList;
