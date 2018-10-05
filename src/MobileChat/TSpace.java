@@ -64,6 +64,22 @@ public class TSpace {
      * @return tuple that matches the pattern
      */
     public List<Object> rdp(List<Object> pattern) {
-
+        int counter = 0;
+        for(String key : tupleSpace.keySet()) {
+            List<Object> value = tupleSpace.get(key);
+            if(pattern.size() == value.size()) {
+                for(int i = 0; i < pattern.size(); i++) {
+                    if(pattern.get(i) == "*") {
+                        counter++;
+                    } else if (pattern.get(i).equals(value.get(i))) {
+                        counter++;
+                    }
+                }
+                if(counter == pattern.size() - 1) {
+                    return tupleSpace.get(key);
+                }
+            }
+        }
+        return null;
     }
 }
