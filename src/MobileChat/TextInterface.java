@@ -22,7 +22,7 @@ public class TextInterface {
                 systemCommand = systemCommand.replace("ADD USER ", "");
                 textI.addUser(systemCommand);
             } else if(systemCommand.contains("SHUT DOWN")) {
-                System.exit(0);
+                shutDown = true;
             }
         }
     }
